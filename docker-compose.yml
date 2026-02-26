@@ -1,0 +1,36 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: strapi_db
+    environment:
+      POSTGRES_DB: strapi
+      POSTGRES_USER: strapi
+      POSTGRES_PASSWORD: strapi
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  strapi:
+    build: .
+    container_name: strapi_app
+    depends_on:
+      - db
+    environment:
+      NODE_ENV: production
+      DATABASE_HOST: db
+      DATABASE_PORT: 5432
+      DATABASE_NAME: projstrapi
+      DATABASE_USERNAME: andre
+      DATABASE_PASSWORD: Mari@strapi
+
+      # Strapi secrets (temporárias)
+      APP_KEYS: "chave1,chave2"
+      API_TOKEN_SALT: "salt_aqui"
+      ADMIN_JWT_SECRET: "admin_secret_aqui"
+      JWT_SECRET: "jwt_secret_aqui"
+    ports:
+      - "1337:1337"
+
+volumes:
+  db_data:
