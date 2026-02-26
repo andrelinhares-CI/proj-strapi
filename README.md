@@ -32,6 +32,7 @@ proj-strapi/
 ├── .env.example
 ├── .gitignore
 ├── package.json
+├── generate-env.js
 └── README.md
 ```
 
