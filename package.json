@@ -38,5 +38,8 @@
   "strapi": {
     "uuid": "ab6b55db-2863-4f2e-830b-7df51d160a72",
     "installId": "4865b76111ebeed037c564637dce055ed48125e7fc6e58e1b4a0736976bc9251"
-  }
+  },
+  "scripts": {
+  "setup": "node generate-env.js"
+}
 }
