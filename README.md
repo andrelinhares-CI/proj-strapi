@@ -61,18 +61,7 @@ npm run setup
 
 O script irá:
 
-Criar o arquivo .env caso ele não exista
-
-Gerar automaticamente:
-
-APP_KEYS
-API_TOKEN_SALT
-ADMIN_JWT_SECRET
-JWT_SECRET
-TRANSFER_TOKEN_SALT
-ENCRYPTION_KEY
-
-As variáveis básicas do banco PostgreSQL
+Criar o arquivo .env caso ele não exista e gerar automaticamente as Secrets e variáveis básicas do banco PostgreSQL
 
 ------------------------------------------------------------
 
