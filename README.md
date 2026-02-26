@@ -41,45 +41,49 @@ proj-strapi/
 
 1) Clonar o repositório:
 
+```
 git clone https://github.com/andrelinhares-CI/proj-strapi.git
+```
+```
 cd proj-strapi
-
+```
 ------------------------------------------------------------
 
 2) Criar o arquivo .env
 
-Copie o modelo:
+Execute o script de setup para gerar automaticamente o arquivo .env com as secrets:
 
-cp .env.example .env
-
-Configure com valores reais:
-
-```env
-# Server
-HOST=0.0.0.0
-PORT=1337
-
-# Secrets
-APP_KEYS=sua_chave1,sua_chave2
-API_TOKEN_SALT=seu_salt
-ADMIN_JWT_SECRET=seu_admin_secret
-JWT_SECRET=seu_jwt_secret
-
-# Database (PostgreSQL)
-DATABASE_CLIENT=postgres
-DATABASE_HOST=db
-DATABASE_PORT=5432
-DATABASE_NAME=projstrapi
-DATABASE_USERNAME=seu_usuario
-DATABASE_PASSWORD=sua_senha
-DATABASE_SSL=false
 ```
+npm run setup
+```
+
+O script irá:
+
+Criar o arquivo .env caso ele não exista
+
+Gerar automaticamente:
+
+APP_KEYS
+
+API_TOKEN_SALT
+
+ADMIN_JWT_SECRET
+
+JWT_SECRET
+
+TRANSFER_TOKEN_SALT
+
+ENCRYPTION_KEY
+
+Configurar as variáveis básicas do banco PostgreSQL
+
 ------------------------------------------------------------
 
 3) Subir os containers:
 
+```
 docker compose up -d --build
-
+```
 ------------------------------------------------------------
 
 4) Acessar o painel administrativo:
@@ -91,11 +95,15 @@ http://localhost:1337/admin
 # 🛑 Parar o Ambiente
 
 Parar containers:
+```
 docker compose down
+```
 
 Resetar banco de dados:
-docker compose down -v
 
+```
+docker compose down -v
+```
 ------------------------------------------------------------
 
 # 🔐 Boas Práticas Aplicadas
