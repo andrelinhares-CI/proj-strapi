@@ -8,8 +8,9 @@ As credenciais são fornecidas via arquivo .env.
 
 ------------------------------------------------------------
 
-📁 Estrutura do Projeto
+# 📁 Estrutura do Projeto
 
+```
 proj-strapi/
 │
 ├── config/
@@ -24,10 +25,11 @@ proj-strapi/
 ├── .gitignore
 ├── package.json
 └── README.md
+```
 
 ------------------------------------------------------------
 
-🐳 Executando o Projeto
+# 🐳 Executando o Projeto
 
 1) Clonar o repositório:
 
@@ -44,6 +46,7 @@ cp .env.example .env
 
 Configure com valores reais:
 
+```env
 # Server
 HOST=0.0.0.0
 PORT=1337
@@ -62,7 +65,7 @@ DATABASE_NAME=projstrapi
 DATABASE_USERNAME=seu_usuario
 DATABASE_PASSWORD=sua_senha
 DATABASE_SSL=false
-
+```
 ------------------------------------------------------------
 
 3) Subir os containers:
@@ -77,7 +80,7 @@ http://localhost:1337/admin
 
 ------------------------------------------------------------
 
-🛑 Parar o Ambiente
+# 🛑 Parar o Ambiente
 
 Parar containers:
 docker compose down
@@ -87,7 +90,7 @@ docker compose down -v
 
 ------------------------------------------------------------
 
-🔐 Boas Práticas Aplicadas
+# 🔐 Boas Práticas Aplicadas
 
 - Uso de variáveis de ambiente para dados sensíveis
 - Separação entre .env (local) e .env.example (versionado)
@@ -97,13 +100,13 @@ docker compose down -v
 
 ------------------------------------------------------------
 
-👤 Autor
+# 👤 Autor
 
 Andre Linhares
 Projeto desenvolvido para fins de estudo e apresentação técnica.
 
 ------------------------------------------------------------
 
-📄 Licença
+# 📄 Licença
 
 Uso educacional.
