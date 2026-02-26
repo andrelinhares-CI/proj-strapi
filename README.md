@@ -111,7 +111,6 @@ docker compose down -v
 # 👤 Autor
 
 Andre Linhares
-Projeto desenvolvido para fins de estudo e apresentação técnica.
 
 ------------------------------------------------------------
 
