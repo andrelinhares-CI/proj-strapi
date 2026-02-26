@@ -8,6 +8,14 @@ As credenciais são fornecidas via arquivo .env.
 
 ------------------------------------------------------------
 
+# 📋 Pré-requisitos
+
+- Docker 24+
+- Docker Compose
+- Git
+
+------------------------------------------------------------
+
 # 📁 Estrutura do Projeto
 
 ```
