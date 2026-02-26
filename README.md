@@ -12,6 +12,7 @@ As credenciais são fornecidas via arquivo .env.
 
 - Docker 24+
 - Docker Compose
+- Node.js
 - Git
 
 ------------------------------------------------------------
@@ -65,18 +66,13 @@ Criar o arquivo .env caso ele não exista
 Gerar automaticamente:
 
 APP_KEYS
-
 API_TOKEN_SALT
-
 ADMIN_JWT_SECRET
-
 JWT_SECRET
-
 TRANSFER_TOKEN_SALT
-
 ENCRYPTION_KEY
 
-Configurar as variáveis básicas do banco PostgreSQL
+As variáveis básicas do banco PostgreSQL
 
 ------------------------------------------------------------
 
@@ -110,10 +106,9 @@ docker compose down -v
 # 🔐 Boas Práticas Aplicadas
 
 - Uso de variáveis de ambiente para dados sensíveis
-- Separação entre .env (local) e .env.example (versionado)
+- Criação da .env e variáveis básicas do banco automaticamente
 - Banco PostgreSQL isolado em container
 - Persistência de dados via volume Docker
-- Estrutura preparada para ambiente de produção
 
 ------------------------------------------------------------
 
